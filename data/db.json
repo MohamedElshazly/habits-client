@@ -1,0 +1,38 @@
+{
+  "habits": [
+    {
+      "id": 1,
+      "content": "Workout Daily",
+      "streak": 8,
+      "user": "omni"
+    },
+    {
+      "id": 2,
+      "content": "practice pixel art",
+      "streak": 2,
+      "user": "omni"
+    },
+    {
+      "id": 3,
+      "content": "deep work 2-4hrs",
+      "streak": 1,
+      "user": "omni"
+    }
+  ],
+  "journal": [
+    {
+      "title": "It's working",
+      "content": "Now I need to move on to css course to get a basic foundation in it no more no less",
+      "date": "2/7/2021",
+      "user": "omni",
+      "id": 1
+    },
+    {
+      "title": "second day",
+      "content": "Ispent the day with my sis and my nephew \n",
+      "date": "2/7/2021",
+      "user": "omni",
+      "id": 2
+    }
+  ]
+}
