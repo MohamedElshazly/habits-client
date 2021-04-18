@@ -12,22 +12,110 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
 
 .navbar .links {
-  margin-left: auto;
+  margin-inline: auto;
+  /* margin-left: 20px; */
 }
+
+
 .navbar a {
-  margin-left: 16px;
+  margin-right: 60px;
   text-decoration: none;
   padding: 6px;
 }
 
 .navbar a:hover {
-  color: #f1356d;
+  color: #0481bb;
+}
+
+.btn {
+  background-color: #0481bb;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-block: 30px;
+  margin-left: 30px;
+}
+
+ul.no-bullets{
+  list-style-type: none;
+  width: 90%;
+  margin: 300px;
+  margin-block: 30px;
+  display: flex;
+}
+
+ul.no-bullets .add{
+  padding: 15px;
+  margin-left: 15px;
+  background-image: url('plus.jpg');
+  cursor: pointer;
+  /* display: block; */
+}
+
+ul.no-bullets .reset{
+  /* padding: 15px; */
+  margin-left: 15px;
+  color: white;
+  background-color: #0481bb;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+
+}
+/* ul.no-bullets .habits:hover{
+  color: #0481bb;
+  cursor: pointer;
+} */
+input[type=text]{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+  margin-left: 30px;
+}
+textarea {
+  width: 75%;
+  height: 500px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  resize: none;
+  margin-left: 30px;
+  font-size: 16px;
+}
+label{
+  margin-left: 20px;
+}
+div.journal .btn{
+  background-color: #0481bb;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-block: 30px;
+  margin-left: 500px;
+  
 }
 .content {
   max-width: 600px;

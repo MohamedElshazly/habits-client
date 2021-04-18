@@ -3,20 +3,44 @@
     {
       "id": 1,
       "content": "Workout Daily",
-      "streak": 8,
+      "streak": 0,
       "user": "omni"
     },
     {
       "id": 2,
       "content": "practice pixel art",
-      "streak": 2,
+      "streak": 0,
       "user": "omni"
     },
     {
       "id": 3,
       "content": "deep work 2-4hrs",
-      "streak": 1,
+      "streak": 0,
       "user": "omni"
+    },
+    {
+      "content": "find good music",
+      "streak": 0,
+      "user": "omni",
+      "id": 4
+    },
+    {
+      "content": "put the hair loss thing twice a day",
+      "streak": 2,
+      "user": "omni",
+      "id": 5
+    },
+    {
+      "content": "buy some milk",
+      "streak": 0,
+      "user": "omni",
+      "id": 6
+    },
+    {
+      "content": "aaa",
+      "streak": 0,
+      "user": "omni",
+      "id": 7
     }
   ],
   "journal": [
@@ -28,11 +52,18 @@
       "id": 1
     },
     {
-      "title": "second day",
-      "content": "Ispent the day with my sis and my nephew \n",
+      "title": "coming back",
+      "content": "the depression funk is going away, I'm trying to get back to work and keep working on that project, it seems cool, I wanna finish it\n",
       "date": "2/7/2021",
       "user": "omni",
       "id": 2
+    },
+    {
+      "title": "fixed some css",
+      "content": "I'm trying to give the website a passable simplistic look, I feel like it looks like dogshit tho, like too much white ",
+      "date": "2/7/2021",
+      "user": "omni",
+      "id": 3
     }
   ]
 }

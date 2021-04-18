@@ -36,6 +36,7 @@ const CreateHabit = () => {
                     value = {content}
                     onChange={(e) => setHabit(e.target.value)}
                 />
+                <br/>
                 <button className="btn">Create Habit!</button>
             </form>
         </div>

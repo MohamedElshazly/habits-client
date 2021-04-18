@@ -12,7 +12,6 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <h1>Welcome.</h1>
         <Switch>
           <Route exact path='/'><Home /></Route>
           <Route path ='/create'><CreateHabit /></Route>

@@ -28,20 +28,26 @@ const CreateJournal = () => {
         <form onSubmit={handleSubmit} method='POST'>
 
             <label>Title: </label>
+            <br/>
             <input 
                 type="text"
                 required
                 value = {title}
                 onChange = {(e) => setTitle(e.target.value)}/>
-
+            <br/>
+            <br/>
             <label>Content: </label>
+            <br/>
+            <br/>
             <textarea 
                 required
                 value = {content}
                 onChange = {(e) => setContent(e.target.value)}
             ></textarea>
-
-            <button>Add Journal Entry</button>
+            <div className="journal">
+               <button className="btn">Add Journal Entry</button> 
+            </div>
+            
         </form>
      );
 }
