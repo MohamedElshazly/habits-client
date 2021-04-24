@@ -1,27 +1,27 @@
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import Axios from 'axios'
 
 const CreateHabit = () => {
 
     const [content, setHabit] = useState('')
     const history = useHistory()
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        const streak = 0
-        const user= 'omni'
-        const habit = {content, streak, user} 
+        // const habit = {content} 
 
-        fetch(`http://localhost:8000/habits/`, {
-            method : 'POST', 
-            headers : {"Content-Type" : "application/json"},
-            body : JSON.stringify(habit)
-        }).then(() => {
-            console.log("Post request done")
+        Axios({
+            method: "POST",
+            data : {
+                habit : content
+            },
+            url: "http://localhost:4000/create-habit",
+            withCredentials:true
+        }).then((res) => {
+            console.log(res)
             history.push('/habits')
         })
-        
-
 
     }
 

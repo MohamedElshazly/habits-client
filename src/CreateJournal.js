@@ -13,14 +13,14 @@ const CreateJournal = () => {
         const date = "2/7/2021"
         const entry = {title, content, date, user}
 
-        fetch('http://localhost:8000/journal/', {
-            method : 'POST',
-            headers : {"Content-Type" : "application/json"},
-            body : JSON.stringify(entry)
-        }).then(() => {
-            console.log("Added new entry to journal...")
-            history.push('/journal')
-        })
+        // fetch('http://localhost:8000/journal/', {
+        //     method : 'POST',
+        //     headers : {"Content-Type" : "application/json"},
+        //     body : JSON.stringify(entry)
+        // }).then(() => {
+        //     console.log("Added new entry to journal...")
+        //     history.push('/journal')
+        // })
 
     }
 

@@ -26,21 +26,15 @@
     },
     {
       "content": "put the hair loss thing twice a day",
-      "streak": 2,
+      "streak": 7,
       "user": "omni",
       "id": 5
     },
     {
-      "content": "buy some milk",
-      "streak": 0,
+      "content": "Meditation",
+      "streak": 1,
       "user": "omni",
       "id": 6
-    },
-    {
-      "content": "aaa",
-      "streak": 0,
-      "user": "omni",
-      "id": 7
     }
   ],
   "journal": [
@@ -64,6 +58,13 @@
       "date": "2/7/2021",
       "user": "omni",
       "id": 3
+    },
+    {
+      "title": "testlorem ",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor mauris vel sem lobortis porta. Pellentesque vitae lacinia dui. Curabitur eu nulla sem. Nullam ultricies sem nec sapien rhoncus pellentesque. Donec eget erat at nisi dapibus facilisis. Maecenas quam ligula, congue non vehicula non, malesuada aliquam ipsum. Donec vel tempor mauris. Vestibulum ornare congue nisi, consectetur venenatis mauris lacinia sed. Mauris sit amet laoreet nulla, eget posuere nisi. Sed rutrum pharetra vehicula.\n\nCurabitur rhoncus libero facilisis, laoreet sem id, viverra nulla. Aliquam tristique euismod leo non vehicula. Suspendisse vestibulum non elit vel vulputate. Morbi a risus sem. Etiam quam mauris, hendrerit in mi non, tincidunt tempor est. Praesent dictum porta consectetur. Proin sit amet magna fermentum, hendrerit sapien mollis, tempus purus. Pellentesque maximus sem sed enim faucibus venenatis non et quam. Ut laoreet mi quis dui sollicitudin, sed vehicula metus consectetur.\n\nFusce at elit neque. Cras ut tristique purus, non rhoncus mi. Fusce non lacus sed mauris sagittis finibus vel in libero. Nullam placerat placerat lacinia. Ut volutpat porta sollicitudin. Nulla ultricies turpis id leo cursus, vitae gravida magna lobortis. Sed ornare egestas sem ac cursus. Integer ultrices purus ac ligula convallis eleifend. Aliquam non tristique tortor.\n\nMorbi non diam ut urna molestie gravida quis sed urna. Pellentesque fringilla, dolor cursus maximus bibendum, purus lorem venenatis ipsum, cursus semper enim justo in leo. Curabitur ex risus, aliquam eget sapien ac, semper vehicula dolor. Aenean tempor imperdiet ipsum, elementum mollis nisl suscipit eget. Proin id dictum mauris, vel mattis tortor. Vestibulum felis mi, tempus eget tincidunt sed, sagittis nec sapien. Maecenas et sollicitudin justo. Suspendisse vel bibendum nisl. Sed consequat id sapien vitae convallis. In sollicitudin est ac massa iaculis, placerat facilisis mi ultricies.\n\nPhasellus lobortis ut lorem et lobortis. Cras venenatis, velit eu lobortis faucibus, turpis leo vehicula turpis, sodales volutpat turpis orci vitae tortor. Integer lobortis ipsum ut nulla placerat maximus. Proin aliquet interdum tortor eu luctus. Aliquam risus lorem, lobortis quis massa at, mattis feugiat risus. Vestibulum at mauris in ligula semper cursus. Praesent malesuada blandit libero, vel varius ex iaculis sed. Praesent vehicula ultrices velit, in placerat lorem scelerisque finibus. Integer est justo, ultricies eget dui sodales, porta commodo leo.",
+      "date": "2/7/2021",
+      "user": "omni",
+      "id": 4
     }
   ]
 }

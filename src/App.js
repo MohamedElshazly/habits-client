@@ -6,6 +6,10 @@ import CreateHabit from './CreateHabit'
 import Journal from './Journal'
 import JournalDetails from './JournalDetails'
 import CreateJournal from './CreateJournal'
+import Register from './Register'
+import Login from './Login'
+import Logout from './Logout'
+import User from './User'
 
 function App() {
   return (
@@ -14,6 +18,10 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path='/'><Home /></Route>
+          <Route path='/register'><Register /></Route>
+          <Route path='/login'><Login /></Route>
+          <Route path='/logout'><Logout /></Route>
+          <Route path='/user'><User /></Route>
           <Route path ='/create'><CreateHabit /></Route>
           <Route path ='/habits'><Habit /></Route>
           <Route path ='/journal'><Journal /></Route>

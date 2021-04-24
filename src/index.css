@@ -117,12 +117,38 @@ div.journal .btn{
   margin-left: 500px;
   
 }
-.content {
+/* .content {
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
+} */
+
+.details{
+  font-size: 20px;
+  margin-top: 10px;
+  padding: 15px;
+  text-align: center;
+  /* margin-left: 10%; */
 }
 
+.dangerBtn{
+  background-color: #cc0d0d;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-block: 30px;
+  margin-left: 45%;
+}
+
+.container {
+  margin-left: 20%;
+
+}
 h1{
   text-align: center;
 }
