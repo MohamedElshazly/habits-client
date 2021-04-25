@@ -9,6 +9,7 @@ export default function Logout() {
         withCredentials:true,
         url:"http://localhost:4000/auth/logout"
     }).then(() =>{
+        window.location.reload(false);
         history.push('/login')
     })
     return (

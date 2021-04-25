@@ -43,11 +43,19 @@ const HabitList = ({habits, setData}) => {
         <div>
             <Link to='/create'><button className="btn">Add new Habit</button></Link>
             {habits && habits.map(habit => (
-                <ul className="no-bullets">
-                    <li className="habits" key={habit._id}>{habit.content} -- {habit.streak} Day Streak!</li>
-                    <button onClick = {() => {handleClick(habit._id)}} className="add"/>
-                    <button onClick = {() => {handleReset(habit._id)}} className="reset">Reset</button>
-                </ul>
+                <div className="card">
+                    <div className="container">
+                        {/* <button className="add">options</button> */}
+                        <p key={habit._id}>{habit.content} -- {habit.streak} Day Streak!</p><br/>
+                        <button onClick = {() => {handleClick(habit._id)}} className="add">+1</button>
+                        <button onClick = {() => {handleReset(habit._id)}} className="reset">Reset</button>
+                    </div>
+                </div>
+                // <ul className="no-bullets">
+                //     <li className="habits" key={habit._id}>{habit.content} -- {habit.streak} Day Streak!</li>
+                //     <button onClick = {() => {handleClick(habit._id)}} className="add"/>
+                //     <button onClick = {() => {handleReset(habit._id)}} className="reset">Reset</button>
+                // </ul>
             ))}
         </div>
      );

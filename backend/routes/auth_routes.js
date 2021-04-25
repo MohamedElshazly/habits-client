@@ -49,8 +49,17 @@ router.post('/login', (req, res, next) => {
 
 })
 
+router.get('/is-logged-in', (req, res) => {
+    if(req.user){
+        res.send("true")
+    }else{
+        res.send("false")
+    }
+})
+
 router.get('/logout', (req, res) => {
     req.logOut();
+    res.send("Logged out!")
     // res.redirect('/'); 
 });
 

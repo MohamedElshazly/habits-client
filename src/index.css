@@ -6,8 +6,13 @@
   margin:0;
   font-family: "Quicksand";
   color: #333;
-}
+  /* background-color: #cccccc; */
 
+}
+.App{
+  background-image: url("BG-2.jpg");
+  height:100vh;
+}
 .navbar {
   padding: 20px;
   display: flex;
@@ -30,11 +35,11 @@
 }
 
 .navbar a:hover {
-  color: #0481bb;
+  color: #2f80ed;
 }
 
 .btn {
-  background-color: #0481bb;
+  background-color: #2f80ed;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -55,19 +60,40 @@ ul.no-bullets{
   display: flex;
 }
 
-ul.no-bullets .add{
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-left: 25%;
+  margin-bottom: 2%;
+  max-width: 50%;
+background-color: #e4eff3;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+  padding: 2px 16px;
+}
+
+div.container .add{
   padding: 15px;
-  margin-left: 15px;
-  background-image: url('plus.jpg');
+  margin-left: 40%;
+  /* background-image: url('plus.jpg'); */
   cursor: pointer;
+  color: white;
+  background-color: #2f80ed;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
   /* display: block; */
 }
 
-ul.no-bullets .reset{
-  /* padding: 15px; */
+div.container .reset{
+  padding: 15px;
   margin-left: 15px;
   color: white;
-  background-color: #0481bb;
+  background-color: #2f80ed;
   border: none;
   text-align: center;
   text-decoration: none;
@@ -145,10 +171,13 @@ div.journal .btn{
   margin-left: 45%;
 }
 
-.container {
+/* .container {
   margin-left: 20%;
 
-}
+} */
 h1{
   text-align: center;
 }
+/* .create{
+  height: 100vh;
+} */

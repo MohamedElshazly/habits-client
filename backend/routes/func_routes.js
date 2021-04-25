@@ -21,7 +21,7 @@ router.get('/list-habits', (req, res) => {
 })
 
 router.post('/update-habit',  (req, res) => {
-    Habit.findOneAndUpdate({_id: req.body.id}, {streak: req.body.streak}, {new : true}).then((habit) => {
+    Habit.findOneAndUpdate({_id: req.body.id}, {streak: req.body.streak}, {new : true, useFindAndModify:false}).then((habit) => {
         res.send(habit)
     })
 })
