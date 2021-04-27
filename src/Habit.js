@@ -4,8 +4,6 @@ import { useState, useEffect } from 'react'
 import Axios from 'axios'
 
 const Habit = () => {
-    // const { data : habits, setData } =  useFetch('http://localhost:8000/habits/')
-    // console.log(habits)
     const [habits, setHabits] = useState('')
     useEffect(() => {
         Axios({

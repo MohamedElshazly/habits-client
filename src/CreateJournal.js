@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-
+import Axios from 'axios'
  
 const CreateJournal = () => {
     const [title, setTitle] = useState('')
@@ -9,18 +9,19 @@ const CreateJournal = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const user = "omni"
-        const date = "2/7/2021"
-        const entry = {title, content, date, user}
+        const entry = {title, content}
 
-        // fetch('http://localhost:8000/journal/', {
-        //     method : 'POST',
-        //     headers : {"Content-Type" : "application/json"},
-        //     body : JSON.stringify(entry)
-        // }).then(() => {
-        //     console.log("Added new entry to journal...")
-        //     history.push('/journal')
-        // })
+        Axios({
+            method: "POST",
+            data : {
+                entry : entry
+            },
+            url: "http://localhost:4000/create-journal-entry",
+            withCredentials:true
+        }).then((res) => {
+            console.log(res)
+            history.push('/journal')
+        })
 
     }
 

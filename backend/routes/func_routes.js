@@ -27,6 +27,25 @@ router.post('/update-habit',  (req, res) => {
     })
 })
 
+router.delete('/delete-habit/:id', (req, res) => {
+    Habit.findOneAndDelete({_id: req.params.id}, {useFindAndModify:false}).then(() => {
+        res.send("habit deleted....")
+    })
+})
+
+router.get('/get-habit/:id', (req, res) => {
+    console.log(req.params.id)
+    Habit.findOne({_id : req.params.id}).then((habit) => {
+        res.send(habit)
+    })
+})
+
+router.post('/edit-habit', (req, res) => {
+    Habit.findOneAndUpdate({_id : req.body.id}, {content : req.body.habit}, {new : true, useFindAndModify:false})
+    .then((habit) => {
+        res.send(habit)
+    })
+})
 
 router.post('/create-journal-entry', async (req, res) => {
     console.log(req.body.entry.title)
@@ -56,4 +75,12 @@ router.delete('/delete-journal-entry/:id', (req, res) => {
         res.send("Entry deleted...")
     })
 })
+
+router.post('/edit-journal-entry', async (req, res) => {
+    Journal.findOneAndUpdate({_id: req.body.id}, {title : req.body.title, content : req.body.content}, {new : true, useFindAndModify:false})
+    .then(() => {
+        res.send("entry updated")
+    })
+})
+
 module.exports = router;

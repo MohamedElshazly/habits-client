@@ -73,6 +73,8 @@ background-color: #e4eff3;
 }
 .container {
   padding: 2px 16px;
+  position: relative;
+  
 }
 
 div.container .add{
@@ -99,8 +101,52 @@ div.container .reset{
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-
 }
+div.container .options{
+  padding: 15px;
+  /* margin-left: 15px; */
+  color: white;
+  background-color: #2f80ed;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  position:absolute;
+  top: 0;
+  right: 0;
+  margin-right: 6px;
+  margin-top: 6px;
+}
+.dropdown {
+  position:absolute;
+  top:0;
+  right: 0; 
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #e4eff3;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0;
+  /* top: 0; */
+}
+.dropdown-content .a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content .a:hover {background-color: #cfd9dd}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 /* ul.no-bullets .habits:hover{
   color: #0481bb;
   cursor: pointer;
@@ -143,6 +189,19 @@ div.journal .btn{
   margin-left: 500px;
   
 }
+div.journalContainer .btn{
+  background-color: #0481bb;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-block: 30px;
+  margin-left: 42%;
+}
 /* .content {
   max-width: 600px;
   margin: 40px auto;
@@ -168,7 +227,7 @@ div.journal .btn{
   font-size: 16px;
   cursor: pointer;
   margin-block: 30px;
-  margin-left: 45%;
+  margin-left: 16px;
 }
 
 /* .container {
