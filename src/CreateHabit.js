@@ -1,12 +1,14 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import Axios from 'axios'
+import  useIsLoggedIn  from './useIsLoggedIn'
+
 
 const CreateHabit = () => {
 
     const [content, setHabit] = useState('')
+    const {loggedInStatus} = useIsLoggedIn('http://localhost:4000/auth/is-logged-in')
     const history = useHistory()
-
     const handleSubmit = async (e) => {
         e.preventDefault()
         // const habit = {content} 
@@ -27,6 +29,11 @@ const CreateHabit = () => {
 
     return (  
         <div className="create">
+            {loggedInStatus===0 ? (
+                <h1>You need to log in first...</h1>
+            ):
+            (
+            <React.Fragment>
             <legend>Add New Habit!</legend>
             <form onSubmit={handleSubmit} method="post">
                 <label>Habit : </label>
@@ -39,6 +46,8 @@ const CreateHabit = () => {
                 <br/>
                 <button className="btn">Create Habit!</button>
             </form>
+            </React.Fragment>
+            )}
         </div>
         
     );

@@ -1,12 +1,15 @@
 import { useParams, useHistory } from 'react-router-dom'
-import { useState, useEffect } from 'react' 
+import React, { useState, useEffect } from 'react' 
 import Axios from 'axios'
+import  useIsLoggedIn  from './useIsLoggedIn'
 
 export default function UpdateJournal() {
     const { id } = useParams()
     const history = useHistory()
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
+    const {loggedInStatus} = useIsLoggedIn('http://localhost:4000/auth/is-logged-in')
+
     // const [entry, setEntry] = useState('')
 
     useEffect(() => {
@@ -40,6 +43,11 @@ const handleSubmit = (e) => {
 
     return (
         <div>
+            {loggedInStatus===0 ? (
+                <h1>You need to log in first...</h1>
+            ):
+            (
+            <React.Fragment>
             <form onSubmit={handleSubmit} method='POST'>
                 <label>Title: </label>
                 <br/>
@@ -62,7 +70,8 @@ const handleSubmit = (e) => {
                 <button className="btn">Edit Journal Entry</button> 
                 </div>
             </form>
-            
+            </React.Fragment>
+            )}
         </div>
     )
 }

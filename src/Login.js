@@ -1,27 +1,29 @@
-import React, {useState,useEffect} from 'react'
+import React, {useState} from 'react'
 import Axios from 'axios'
 import { useHistory } from "react-router-dom";
+import  useIsLoggedIn  from './useIsLoggedIn'
 
 export default function Login() {
 
     const [loginUsername, setLoginUsername] = useState("")
     const [loginPassword, setLoginPassword] = useState("")
-    const [loggedInStatus, setLoggedInStatus] = useState(0)
+    const {loggedInStatus} = useIsLoggedIn('http://localhost:4000/auth/is-logged-in');
+    // console.log(loggedInStatus)
     const history = useHistory()
-    useEffect(() => {
-        Axios({
-            method:"GET",
-            url:"http://localhost:4000/auth/is-logged-in",
-            withCredentials:true,
-        }).then((res) => {
-            console.log(loggedInStatus)
-            if(res.data === true){
-                setLoggedInStatus(1)
-            }else{
-                setLoggedInStatus(0)
-            }
-        })
-    },[loggedInStatus])
+    // useEffect(() => {
+    //     Axios({
+    //         method:"GET",
+    //         url:"http://localhost:4000/auth/is-logged-in",
+    //         withCredentials:true,
+    //     }).then((res) => {
+    //         console.log(loggedInStatus)
+    //         if(res.data === true){
+    //             setLoggedInStatus(1)
+    //         }else{
+    //             setLoggedInStatus(0)
+    //         }
+    //     })
+    // },[loggedInStatus])
 
     const login = async () => {
         Axios({

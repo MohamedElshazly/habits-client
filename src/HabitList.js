@@ -1,7 +1,11 @@
 import { Link, useHistory } from 'react-router-dom'
 import Axios from 'axios'
+import  useIsLoggedIn  from './useIsLoggedIn'
+import React from 'react'
+
 
 const HabitList = ({habits, setData}) => {
+    const {loggedInStatus} = useIsLoggedIn('http://localhost:4000/auth/is-logged-in')
     const history = useHistory()
     
     const handleClick = (id) => {
@@ -57,6 +61,11 @@ const HabitList = ({habits, setData}) => {
     }
     return ( 
         <div>
+            {loggedInStatus===0 ? (
+                <h1>You need to log in first...</h1>
+            ):
+            (
+            <React.Fragment>
             <Link to='/create'><button className="btn">Add new Habit</button></Link>
             {habits && habits.map(habit => (
                 <div className="card">
@@ -76,6 +85,8 @@ const HabitList = ({habits, setData}) => {
                     </div>
                 </div>
             ))}
+            </React.Fragment>
+            )}
         </div>
      );
 }
