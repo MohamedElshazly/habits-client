@@ -10,7 +10,7 @@ export default function Logout() {
         url:"https://new-habits.herokuapp.com/auth/logout"
     }).then(() =>{
         window.location.reload(false);
-        history.push('/')
+        history.push('/login')
     })
     return (
         <div>
