@@ -6,13 +6,13 @@ import  useIsLoggedIn  from './useIsLoggedIn'
 const Journal = () => {
 
     const [entries, setentries] = useState('')
-    const {loggedInStatus} = useIsLoggedIn('http://localhost:4000/auth/is-logged-in')
+    const {loggedInStatus} = useIsLoggedIn('https://new-habits.herokuapp.com/auth/is-logged-in')
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         Axios({
             method:"GET",
-            url: "http://localhost:4000/list-journal-entries",
+            url: "https://new-habits.herokuapp.com/list-journal-entries",
             withCredentials:true
         }).then((res) => {
             setentries(res.data)

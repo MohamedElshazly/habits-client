@@ -8,14 +8,14 @@ export default function UpdateJournal() {
     const history = useHistory()
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
-    const {loggedInStatus} = useIsLoggedIn('http://localhost:4000/auth/is-logged-in')
+    const {loggedInStatus} = useIsLoggedIn('https://new-habits.herokuapp.com/auth/is-logged-in')
 
     // const [entry, setEntry] = useState('')
 
     useEffect(() => {
         Axios({
         method:"GET", 
-        url:`http://localhost:4000/journal-entry/${id}`,
+        url:`https://new-habits.herokuapp.com/journal-entry/${id}`,
         withCredentials:true
     }).then((res) => {
         setTitle(res.data.title)
@@ -28,7 +28,7 @@ const handleSubmit = (e) => {
     e.preventDefault()
     Axios({
         method:"POST",
-        url: "http://localhost:4000/edit-journal-entry",
+        url: "https://new-habits.herokuapp.com/edit-journal-entry",
         withCredentials:true,
         data : {
             id: id,

@@ -7,7 +7,7 @@ export default function Logout() {
     Axios({
         method:"GET", 
         withCredentials:true,
-        url:"http://localhost:4000/auth/logout"
+        url:"https://new-habits.herokuapp.com/auth/logout"
     }).then(() =>{
         window.location.reload(false);
         history.push('/login')

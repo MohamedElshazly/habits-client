@@ -8,7 +8,7 @@ const Navbar = () => {
     useEffect(() => {
         Axios({
             method:"GET",
-            url:"http://localhost:4000/auth/is-logged-in",
+            url:"https://new-habits.herokuapp.com/auth/is-logged-in",
             withCredentials:true,
         }).then((res) => {
             console.log(loggedInStatus)

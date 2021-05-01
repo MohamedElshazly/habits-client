@@ -6,7 +6,7 @@ export default function User() {
     Axios({
         method:"GET", 
         withCredentials:true,
-        url: "http://localhost:4000/auth/user"
+        url: "https://new-habits.herokuapp.com/auth/user"
     }).then((res) => {
         setUser(res.data)
         console.log(res.data)

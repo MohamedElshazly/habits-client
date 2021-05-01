@@ -7,13 +7,13 @@ export default function EditHabit() {
     const { id } = useParams()
     const history = useHistory()
     const [habit, setHabit] = useState('')
-    const {loggedInStatus} = useIsLoggedIn('http://localhost:4000/auth/is-logged-in');
+    const {loggedInStatus} = useIsLoggedIn('https://new-habits.herokuapp.com/auth/is-logged-in');
 
 
     useEffect(() => {
         Axios({
             method:"GET",
-            url:`http://localhost:4000/get-habit/${id}`,
+            url:`https://new-habits.herokuapp.com/get-habit/${id}`,
             withCredentials:true
         }).then((res) => {
             setHabit(res.data.content)
@@ -24,7 +24,7 @@ export default function EditHabit() {
         e.preventDefault()
         Axios({
             method:"POST",
-            url:"http://localhost:4000/edit-habit",
+            url:"https://new-habits.herokuapp.com/edit-habit",
             data:{
                 id: id,
                 habit : habit

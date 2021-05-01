@@ -20,7 +20,7 @@ const HabitList = ({habits, setData}) => {
                 id: habit._id,
                 streak : habit.streak
             },
-            url:"http://localhost:4000/update-habit",
+            url:"https://new-habits.herokuapp.com/update-habit",
             withCredentials:true
         }).then((res) => {console.log(res)})
         
@@ -39,7 +39,7 @@ const HabitList = ({habits, setData}) => {
                 id: habit._id,
                 streak : habit.streak
             },
-            url:"http://localhost:4000/update-habit",
+            url:"https://new-habits.herokuapp.com/update-habit",
             withCredentials:true
         }).then((res) => {console.log(res)})
     }
@@ -51,7 +51,7 @@ const HabitList = ({habits, setData}) => {
         setData(oldHabits)
         Axios({
             method:"DELETE",
-            url:`http://localhost:4000/delete-habit/${id}`,
+            url:`https://new-habits.herokuapp.com/delete-habit/${id}`,
             withCredentials:true
         }).then(() => {
             console.log("here")

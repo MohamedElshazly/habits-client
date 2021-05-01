@@ -15,7 +15,7 @@ export default function Register() {
           password: registerPassword,
         },
         withCredentials: true,
-        url: "http://localhost:4000/auth/register",
+        url: "https://new-habits.herokuapp.com/auth/register",
       }).then((res) => {
         console.log(res)
         history.push('/login')

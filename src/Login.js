@@ -7,7 +7,7 @@ export default function Login() {
 
     const [loginUsername, setLoginUsername] = useState("")
     const [loginPassword, setLoginPassword] = useState("")
-    const {loggedInStatus} = useIsLoggedIn('http://localhost:4000/auth/is-logged-in');
+    const {loggedInStatus} = useIsLoggedIn('https://new-habits.herokuapp.com/auth/is-logged-in');
 
     const history = useHistory()
    
@@ -20,7 +20,7 @@ export default function Login() {
                 password: loginPassword
             },
             withCredentials: true,
-            url: "http://localhost:4000/auth/login"
+            url: "https://new-habits.herokuapp.com/auth/login"
         }).then((res) => {
             console.log(res)
             history.push('/')

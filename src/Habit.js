@@ -7,13 +7,13 @@ import  useIsLoggedIn  from './useIsLoggedIn'
 
 const Habit = () => {
     const [habits, setHabits] = useState('')
-    const {loggedInStatus} = useIsLoggedIn('http://localhost:4000/auth/is-logged-in')
+    const {loggedInStatus} = useIsLoggedIn('https://new-habits.herokuapp.com/auth/is-logged-in')
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         Axios({
             method:"GET",
-            url: "http://localhost:4000/list-habits",
+            url: "https://new-habits.herokuapp.com/list-habits",
             withCredentials:true
         }).then((res) => {
             setHabits(res.data)

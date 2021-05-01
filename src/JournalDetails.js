@@ -9,13 +9,13 @@ const JournalDetails = () => {
     console.log(id)
     const history = useHistory()
     const [entry, setEntry] = useState('')
-    const {loggedInStatus} = useIsLoggedIn('http://localhost:4000/auth/is-logged-in')
+    const {loggedInStatus} = useIsLoggedIn('https://new-habits.herokuapp.com/auth/is-logged-in')
 
 
     useEffect(() => {
         Axios({
         method:"GET", 
-        url:`http://localhost:4000/journal-entry/${id}`,
+        url:`https://new-habits.herokuapp.com/journal-entry/${id}`,
         withCredentials:true
     }).then((res) => {
         setEntry(res.data)
@@ -27,7 +27,7 @@ const JournalDetails = () => {
     const handleClick = () => {
         Axios({
             method:"DELETE",
-            url:`http://localhost:4000/delete-journal-entry/${id}`,
+            url:`https://new-habits.herokuapp.com/delete-journal-entry/${id}`,
             withCredentials:true
         }).then(() => {
             history.push('/journal')

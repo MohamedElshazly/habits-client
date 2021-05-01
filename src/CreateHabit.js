@@ -7,7 +7,7 @@ import  useIsLoggedIn  from './useIsLoggedIn'
 const CreateHabit = () => {
 
     const [content, setHabit] = useState('')
-    const {loggedInStatus} = useIsLoggedIn('http://localhost:4000/auth/is-logged-in')
+    const {loggedInStatus} = useIsLoggedIn('https://new-habits.herokuapp.com/auth/is-logged-in')
     const history = useHistory()
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -18,7 +18,7 @@ const CreateHabit = () => {
             data : {
                 habit : content
             },
-            url: "http://localhost:4000/create-habit",
+            url: "https://new-habits.herokuapp.com/create-habit",
             withCredentials:true
         }).then((res) => {
             console.log(res)

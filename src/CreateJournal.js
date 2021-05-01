@@ -8,7 +8,7 @@ const CreateJournal = () => {
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
     const history = useHistory()
-    const {loggedInStatus} = useIsLoggedIn('http://localhost:4000/auth/is-logged-in')
+    const {loggedInStatus} = useIsLoggedIn('https://new-habits.herokuapp.com/auth/is-logged-in')
 
 
     const handleSubmit = (e) => {
@@ -20,7 +20,7 @@ const CreateJournal = () => {
             data : {
                 entry : entry
             },
-            url: "http://localhost:4000/create-journal-entry",
+            url: "https://new-habits.herokuapp.com/create-journal-entry",
             withCredentials:true
         }).then((res) => {
             console.log(res)
