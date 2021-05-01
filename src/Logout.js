@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { useHistory } from "react-router-dom";
 import Axios from 'axios'
 
@@ -12,9 +12,5 @@ export default function Logout() {
         window.location.reload(false);
         history.push('/login')
     })
-    return (
-        <div>
-            Redirecting...       
-        </div>
-    )
+    
 }
