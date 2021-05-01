@@ -14,7 +14,7 @@ export default function Logout() {
     })
     return (
         <div>
-            
+            Reirecting...       
         </div>
     )
 }
