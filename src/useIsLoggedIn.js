@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Axios from 'axios'
 
 const useIsLoggedIn = (url) => {
-    const [loggedInStatus, setLoggedInStatus] = useState(0)
+    const [loggedInStatus, setLoggedInStatus] = useState(true)
     
     useEffect(() => {
         Axios({
@@ -12,9 +12,9 @@ const useIsLoggedIn = (url) => {
         }).then((res) => {
             console.log(loggedInStatus)
             if(res.data === true){
-                setLoggedInStatus(1)
+                setLoggedInStatus(true)
             }else{
-                setLoggedInStatus(0)
+                setLoggedInStatus(false)
             }
         })
     })
